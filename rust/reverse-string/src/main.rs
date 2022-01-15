@@ -1,3 +1,5 @@
+// https://www.codewars.com/kata/5168bb5dfe9a00b126000018
+
 fn solution(phrase: &str) -> String {
     let f: Vec<_> = phrase.split("").collect();
     let mut final_string = "".to_string();
