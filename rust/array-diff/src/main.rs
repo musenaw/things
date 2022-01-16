@@ -11,10 +11,9 @@ where
         set_to_delete.insert(item);
     }
     let final_vec: Vec<_> = a
-        .iter()
-        .filter(|&x| !set_to_delete.contains(x))
-        .cloned()
-        .collect::<Vec<T>>();
+        .into_iter()
+        .filter(|x| !set_to_delete.contains(&x))
+        .collect();
     println!("{:?}", final_vec);
     final_vec
 }
