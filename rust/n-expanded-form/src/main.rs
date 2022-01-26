@@ -17,6 +17,22 @@ fn expanded_form(n: u64) -> String {
     result[3..].to_string()
 }
 
+/* most voted
+fn expanded_form(n: u64) -> String {
+    n.to_string()
+        .chars()
+        .rev()
+        .zip(0..)
+        .filter(|&(c, _)| c != '0')
+        .map(|(c, p)| format!("{}{}", c, "0".repeat(p)))
+        .collect::<Vec<_>>()
+        .into_iter()
+        .rev()
+        .collect::<Vec<_>>()
+        .join(" + ")
+}
+*/
+
 fn main() {
     println!("Hello, world!");
     expanded_form(12);
